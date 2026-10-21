@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="aimbuddy"
+version="1.0.0"
+displayName="AimBuddy"
+description='''
+A configurable single-player mob target-assist practice mod for Minecraft 1.16.5.
+'''
+
+[[dependencies.aimbuddy]]
+modId="forge"
+mandatory=true
+versionRange="[36.2.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.aimbuddy]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.5]"
+ordering="NONE"
+side="BOTH"
