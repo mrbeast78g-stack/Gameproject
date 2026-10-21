@@ -19,12 +19,12 @@ jobs:
         with:
           distribution: temurin
           java-version: '8'
-      - name: Set up Gradle 6.9.4
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '6.9.4'
+      - name: Install Gradle 6.9.4
+        run: |
+          curl -fL https://services.gradle.org/distributions/gradle-6.9.4-bin.zip -o /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /tmp
       - name: Build mod JAR
-        run: gradle --no-daemon build
+        run: /tmp/gradle-6.9.4/bin/gradle --no-daemon build
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
