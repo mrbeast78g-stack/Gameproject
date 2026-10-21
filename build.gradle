@@ -15,10 +15,10 @@ version = '1.0.0'
 group = 'com.kovak.aimbuddy'
 archivesBaseName = 'aimbuddy'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+sourceCompatibility = targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'snapshot', version: '20210309-1.16.5'
     runs {
         client {
             workingDirectory project.file('run')
